@@ -3,7 +3,8 @@ package entities;
 public class Funcionario {
     protected String nome;
     protected Integer horas;
-    protected Double valorPorHora;
+    protected double valorPorHora;
+    protected double salario;
 
     
 
@@ -12,7 +13,7 @@ public class Funcionario {
 
     
 
-    public Funcionario(String nome, Integer horas, Double valorPorHora) {
+    public Funcionario(String nome, Integer horas, double valorPorHora) {
         super();
         this.nome = nome;
         this.horas = horas;
@@ -21,7 +22,18 @@ public class Funcionario {
 
 
 
-    public double pagamento(){
-        return this.horas * this.valorPorHora;
+    public void pagamento(){
+        this.salario = this.horas * this.valorPorHora;
+        
     }
+
+
+
+    @Override
+    public String toString() {
+        return "Funcionario [nome=" + nome + ", horas=" + horas + ", valorPorHora=" + valorPorHora + ", salario="
+                + salario + "]";
+    }
+
+    
 }
