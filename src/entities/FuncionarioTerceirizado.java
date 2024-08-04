@@ -12,8 +12,8 @@ public class FuncionarioTerceirizado extends Funcionario {
     
     @Override
     public void pagamento(){
-        this.salarioTotal = this.salario * this.valorPorHora;
-        this.salarioTotal += salarioAdicional;
+        this.salario = this.horas * this.valorPorHora;
+        this.salarioTotal += this.salario + this.salarioAdicional;
     }
 
     @Override
